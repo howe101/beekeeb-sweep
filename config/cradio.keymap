@@ -8,6 +8,7 @@
 #define LAYER2 1
 #define LAYER3 2
 #define LAYER4 3
+#define COLEMAK 4
 
 &lt { quick_tap_ms = <400>; tapping_term_ms = <400>; };
 
@@ -92,6 +93,20 @@
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none     &bt BT_CLR      &none      &to 0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        //COLEMAK-DH LAYER
+        COLEMAK {
+            bindings = <
+        //
+                &kp Q      &kp W      &kp F       &kp P          &lt LAYER3 B              &lt LAYER3 J   &kp L   &kp U         &kp Y        &mt COLON SEMICOLON
+        //
+                &kp A      &kp R      &kp S       &kp T          &kp G                     &kp M          &kp N   &kp E         &kp I        &mt O
+        //
+                &kp Z      &kp X      &kp C       &kp D          &kp V                     &kp K          &kp H   &mt SQT COMMA  &mt DOT DQT  &mt SLASH CAPS
+        //
+                                                  &mo LAYER2     &kp ENTER                 &kp SPACE      &mo LAYER2
             >;
         };
     };
