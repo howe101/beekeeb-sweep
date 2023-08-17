@@ -93,16 +93,16 @@
         LAYER4 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  RESET   │          │          │PROFILE 0 │   │          │          │          │  RESET   │          │
-             &none    &sys_reset   &none      &none    &bt BT_SEL 0     &none      &none      &none    &sys_reset   &none
+        //│          │  RESET   │          │          │PROFILE 2 │   │          │          │          │  RESET   │          │
+             &none    &sys_reset   &none      &none    &bt BT_SEL 2     &none      &none      &none    &sys_reset   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │BOOTLOADER│          │          │PROFILE 1 │   │          │          │          │BOOTLOADER│          │
              &none    &bootloader  &none      &none    &bt BT_SEL 1     &none      &none      &none    &bootloader  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │PROFILE 2 │   │          │          │          │          │          │
-             &none      &none      &none      &none    &bt BT_SEL 2     &none      &none      &none      &none      &none
+        //│          │          │          │          │PROFILE 0 │   │          │          │          │          │          │
+             &none      &none      &none      &none    &bt BT_SEL 0     &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none     &bt BT_CLR      &none      &to 0
+                                              &bt BT_CLR  &trans       &trans      &to 0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -117,7 +117,7 @@
         //
                 &kp Z      &kp X      &kp C       &kp D          &kp V                     &kp K          &kp H   &pun SQT COMMA  &pun DQT DOT  &pun SLASH CAPS
         //
-                                                  &mo LAYER2     &kp ENTER                 &kp SPACE      &mo LAYER2
+                                                  &mo LAYER2     &kp ENTER                 &kp SPACE      &to 0
             >;
         };
     };
