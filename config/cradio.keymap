@@ -137,9 +137,9 @@
         GAMING {
             bindings = <
         //
-                &kp C     &kp A     &kp W     &kp D       &htl ALPHA N3               &htl ALPHA ESC &kp N7 &kp N8 &kp N9 &none
+                &kp C     &kp X     &kp W     &kp R       &htl ALPHA N3               &htl ALPHA ESC &kp N7 &kp N8 &kp N9 &none
         //
-                &none     &kp X     &kp S     &kp R       &kp N2                      &none        &kp N4   &kp N5   &kp N6 &none
+                &none     &kp A     &kp S     &kp D       &kp N2                      &none        &kp N4   &kp N5   &kp N6 &none
         //
                 &kp ESC   &none     &kp SPACE     &none       &kp N1                      &kp N0       &kp N1   &kp N2   &kp N3 &none
         //
