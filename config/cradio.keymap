@@ -21,7 +21,7 @@
             label = "TAP_DANCE_0";
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp RCMD>, <&kp RCMD>, <&to BOOT>, <&to COLEMAK>, <&to GAMING>;
         };
 
