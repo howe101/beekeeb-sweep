@@ -87,9 +87,9 @@
         //
                 &kp Q      &kp W      &kp E       &kp R          &htl EXCEL T            &htl EXCEL Y   &kp U   &kp I         &kp O        &kp P
         //
-                &kp A      &kp S      &kp D       &kp F          &kp G                     &kp H          &kp J   &kp K         &kp L        &commadot
+                &kp A      &kp S      &kp D       &kp F          &kp G                     &kp H          &kp J   &kp K         &kp L        &semicoloncolon
         //
-                &kp Z      &kp X      &kp C       &kp V          &kp B                     &kp N          &kp M   &slashquestion  &sqtdqt  &semicoloncolon
+                &kp Z      &kp X      &kp C       &kp V          &kp B                     &kp N          &kp M   &slashquestion  &sqtdqt  &commadot
         //
                                                   &mo NUMBERS     &kp SPACE                 &kp ENTER      &kp LSHFT
             >;
