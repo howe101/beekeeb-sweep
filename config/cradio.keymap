@@ -25,14 +25,44 @@
             bindings = <&kp RCMD>, <&kp RCMD>, <&to BOOT>, <&to COLEMAK>, <&to GAMING>;
         };
 
-        pun: some_punctuations {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SOME_PUNCTUATIONS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
+        semicoloncolon: semicolon_colon {
+            label = "SEMICOLON_COLON";
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp SEMICOLON>, <&kp COLON>;
+        };
+
+        commadot: comma_dot {
+            label = "COMMA_DOT";
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp COMMA>, <&kp DOT>;
+        };
+
+        sqtdqt: sqt_dqt {
+            label = "SQT_DQT";
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp SQT>, <&kp DQT>;
+        };
+
+        slashquestion: slash_question {
+            label = "SLASH_QUESTION";
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp SLASH>, <&kp QUESTION>;
         };
 
         htl: holdto_layer {
@@ -65,11 +95,11 @@
         //
                 &kp Q      &kp W      &kp E       &kp R          &htl EXCEL T            &htl EXCEL Y   &kp U   &kp I         &kp O        &kp P
         //
-                &kp A      &kp S      &kp D       &kp F          &kp G                     &kp H          &kp J   &kp K         &kp L        &pun DOT COMMA
+                &kp A      &kp S      &kp D       &kp F          &kp G                     &kp H          &kp J   &kp K         &kp L        &commadot
         //
-                &kp Z      &kp X      &kp C       &kp V          &kp B                     &kp N          &kp M   &kp CAPSLOCK  &pun DQT SQT  &pun COLON SEMICOLON
+                &kp Z      &kp X      &kp C       &kp V          &kp B                     &kp N          &kp M   &slashquestion  &sqtdqt  &semicoloncolon
         //
-                                                  &mo NUMBERS     &kp ENTER                 &kp SPACE      &mo NUMBERS
+                                                  &mo NUMBERS     &kp SPACE                 &kp ENTER      &kp LSHFT
             >;
         };
 
@@ -81,7 +111,7 @@
         //
                 &kp C_VOL_DN  &kp C_VOL_UP   &kp MINUS       &kp PLUS   &kp BACKSPACE                &none                 &kp LT     &kp GT     &td0    &trans 
         //
-                &kp C_BRI_DN  &kp C_BRI_UP   &kp UNDERSCORE  &kp EQUAL  &kp ESC                      &pun SLASH QUESTION    &kp LBKT   &kp RBKT   &trans    &trans 
+                &kp C_BRI_DN  &kp C_BRI_UP   &kp UNDERSCORE  &kp EQUAL  &kp ESC                      &none    &kp LBKT   &kp RBKT   &trans    &trans 
         //
                                                              &sk LSHFT  &trans                       &trans                &sk LSHFT 
             >;
@@ -123,13 +153,13 @@
         COLEMAK {
             bindings = <
         //
-                &kp Q      &kp W      &kp F       &kp P          &htl EXCEL B              &htl EXCEL J   &kp L   &kp U         &kp Y        &pun COLON SEMICOLON
+                &kp Q      &kp W      &kp F       &kp P          &htl EXCEL B              &htl EXCEL J   &kp L   &kp U         &kp Y        &semicoloncolon
         //
                 &kp A      &kp R      &kp S       &kp T          &kp G                     &kp M          &kp N   &kp E         &kp I        &kp O
         //
-                &kp Z      &kp X      &kp C       &kp D          &kp V                     &kp K          &kp H   &pun SQT COMMA  &pun DQT DOT  &pun SLASH CAPS
+                &kp Z      &kp X      &kp C       &kp D          &kp V                     &kp K          &kp H   &slashquestion  &sqtdqt  &commadot
         //
-                                                  &mo NUMBERS     &kp ENTER                 &kp SPACE      &to 0
+                                                  &mo NUMBERS     &kp SPACE                 &kp ENTER      &kp LSHFT
             >;
         };
 
@@ -141,7 +171,7 @@
         //
                 &none     &kp A     &kp S     &kp D       &kp N2                      &none        &kp N4   &kp N5   &kp N6 &none
         //
-                &kp ESC   &none     &kp SPACE     &none       &kp N1                      &kp N0       &kp N1   &kp N2   &kp N3 &none
+                &kp ESC   &none     &kp SPACE     &kp SPACE       &kp N1                      &kp N0       &kp N1   &kp N2   &kp N3 &none
         //
                                               &kp LSHFT   &kp E                      &trans       &kp LSHFT
             >;
