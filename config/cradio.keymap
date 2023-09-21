@@ -29,7 +29,7 @@
             label = "SEMICOLON_COLON";
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp SEMICOLON>, <&kp COLON>;
         };
 
@@ -37,7 +37,7 @@
             label = "COMMA_DOT";
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp COMMA>, <&kp DOT>;
         };
 
@@ -45,7 +45,7 @@
             label = "SQT_DQT";
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp DQT>;
         };
 
@@ -53,7 +53,7 @@
             label = "SLASH_QUESTION";
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp SLASH>, <&kp QUESTION>;
         };
 
@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLDTO_LAYER";
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&to>, <&kp>;
